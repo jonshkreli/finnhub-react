@@ -11,6 +11,7 @@ const ChartView = ({symbolKey}) => {
     const seriesData = chartData[symbolKey]?.data || []
     if(seriesData.length > 0) {
         xAxisLabel = xAxisLabelString(seriesData);
+        // console.log(seriesData)
     }
     return (
         <section className="chart-view">

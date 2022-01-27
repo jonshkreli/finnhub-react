@@ -8,7 +8,8 @@ import {simpleTimeFilter} from "./timeFrameFilters";
 export const intelligentSortingAndFiltering = ({currentDataArray, newPayloadArray, timeFrame, period}) => {
     // console.log(currentDataArray, newPayloadArray)
     if(currentDataArray[0]) {
-        newPayloadArray = newPayloadArray.filter(a => a.t > currentDataArray[0].t)
+        //make sure to use only values which have higher timestamp than the old one so times do not mess up
+        newPayloadArray = newPayloadArray.filter(a => a.t > currentDataArray[currentDataArray.length-1].t)
     }
     newPayloadArray = newPayloadArray.sort((a, b) => a.t > b.t)
     newPayloadArray = simpleTimeFilter([...currentDataArray, ...newPayloadArray], timeFrame, period)
