@@ -1,0 +1,42 @@
+.App {
+  .container {
+    margin: 20px 10px;
+  }
+
+  .parameters-container {
+    background: beige;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 10px #070707;
+
+    h3 {
+      border-radius: 10px 10px 0 0;
+      background: #09053b;;
+      color: #FFF;
+      padding: 5px;
+    }
+
+    .parameter-container {
+      padding: 5px;
+      .from {
+        color: midnightblue;
+      }
+      .to {
+        color: dodgerblue;
+      }
+    }
+
+
+  }
+
+  .chart-view {
+    .chart-title {
+
+    }
+
+    .chart-container {
+      background: azure;
+    }
+  }
+
+}
+
